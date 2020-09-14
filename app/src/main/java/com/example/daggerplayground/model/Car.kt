@@ -5,8 +5,8 @@ import javax.inject.Inject
 
 class Car {
 
-    var rueda: Wheel
-    var motor : Engine
+    private val rueda: Wheel
+    private val  motor : Engine
 
     @Inject
     constructor(wheel : Wheel , engine : Engine) {
