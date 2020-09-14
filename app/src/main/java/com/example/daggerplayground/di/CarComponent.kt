@@ -10,5 +10,6 @@ interface CarComponent {
     //by using this we can get access to the objects instance
     fun getCar(): Car
 
+    //field injection
     fun inject(mainActivity: MainActivity)
 }
