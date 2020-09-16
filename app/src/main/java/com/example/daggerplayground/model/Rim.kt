@@ -1,6 +1,6 @@
 package com.example.daggerplayground.model
 
-class Rim() {
+class Rim {
     // in this example(branch) we don't have access to this class, we pretend it's from a third party library
 
     init {

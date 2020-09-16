@@ -6,7 +6,8 @@ import dagger.Component
 
 @Component(
     modules = [
-    WheelModule::class
+    WheelModule::class,
+        GasolineEngineModule::class
     ]
 )
 interface CarComponent {

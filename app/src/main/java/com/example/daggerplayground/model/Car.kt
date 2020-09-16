@@ -16,6 +16,7 @@ class Car {
 
 
     fun drive(){
+        motor.startEngine()
         println(" DEBUG, Car, drive, called! ")
     }
 
