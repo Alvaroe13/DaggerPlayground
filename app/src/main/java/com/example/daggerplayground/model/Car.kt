@@ -1,22 +1,24 @@
 package com.example.daggerplayground.model
 
+import android.util.Log
 import javax.inject.Inject
 
+private const val TAG = "CarTAB"
 
 class Car {
 
-    var rueda: Wheel
-    var motor : Engine
+    private var _wheel: Wheel
+    private var _engine : Engine
 
     @Inject
     constructor(wheel : Wheel , engine : Engine) {
-        rueda = wheel
-        motor = engine
+        _wheel = wheel
+        _engine = engine
     }
 
 
     fun drive(){
-        println("Car, drive, called! ")
+        Log.d(TAG, "drive: triggered")
     }
 
 }

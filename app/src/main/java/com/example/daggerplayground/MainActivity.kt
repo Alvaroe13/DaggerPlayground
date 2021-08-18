@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.daggerplayground.di.DaggerCarComponent
 import com.example.daggerplayground.model.Car
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
+    @Inject
     lateinit var car: Car
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,10 +16,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //init car using Dagger
-        car = DaggerCarComponent.create().getCar()
+       DaggerCarComponent.create().inject(this)
 
         car.drive()
-
     }
 
 
