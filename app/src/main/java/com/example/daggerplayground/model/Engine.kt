@@ -1,5 +1,6 @@
 package com.example.daggerplayground.model
 
-import javax.inject.Inject
+interface Engine{
 
-class Engine @Inject constructor()
+    fun startEngine()
+}
